@@ -10,6 +10,7 @@ Fluxo de Processamento Assíncrono
 Para lidar com arquivos grandes sem bloquear a API, utilizamos um padrão de Producer-Consumer com System.Threading.Channels.
 
 Diagrama de Sequencia
+    
     autonumber
     actor User as Contador
     participant API as API Controller
@@ -40,6 +41,7 @@ Modelagem de Dados (ERD)
 A estrutura do banco reflete a separação entre o dado bruto importado e o resultado da inteligência do sistema.
 
 Diagrama Entidade-Relacionamento
+
     RECONCILIACAO ||--|{ TRANSACAO : contem
     RECONCILIACAO ||--|{ RESULTADO : gera
     USER ||--|{ RECONCILIACAO : possui
